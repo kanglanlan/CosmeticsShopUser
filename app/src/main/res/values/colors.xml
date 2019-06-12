@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#FD2E62</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="transparent_1">#20000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_2">#01ffffff</color>
+    <color name="tip_blue">#0062ce</color>
+    <color name="b3">#333333</color>
+    <color name="text6">#666666</color>
+    <color name="text9">#999999</color>
+
+    <color name="main">#FD2E62</color>
+    <color name="red">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="blue">#2180F8</color>
+    <color name="bg">#f7f7f7</color>
+    <color name="xian">#e7e7e7</color>
+    <color name="line_color">#e7e7e7</color>
+    <color name="white">#ffffff</color>
+    <color name="txthui">#999999</color>
+    <color name="txthui2">#555555</color>
+
+    <color name="colorf7">#f7f7f7</color>
+
+    <color name="couponColor">#ff6666</color>
+
+
+    <color name="kprogresshud_default_color">#60111111</color>
+    <color name="kprogresshud_grey_color">#449E9E9E</color>
+
+    <color name="launchColor">#fff4f8</color>
+
+</resources>

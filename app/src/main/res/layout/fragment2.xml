@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/toolbar_padding_top">
+
+        <TextView
+            android:id="@+id/tv_fenlei"
+            style="@style/Font12_hui2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/ico_img10"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="分类" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            style="@style/Font14_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bt_searchhui"
+            android:drawableLeft="@drawable/ico_img09"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="搜一搜"
+            android:paddingLeft="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/ico_img30"
+                />
+
+            <TextView
+                android:id="@+id/tv_messagenum"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/red"
+                android:gravity="center"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="9dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/xian" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/bg"
+                    app:banner_pointAutoPlayInterval="5000"
+                    app:banner_pointContainerBackground="@color/transparent"
+                    />
+
+                <com.meida.cosmeticsshopuser.MyView.CustomGridView
+                    android:id="@+id/gv_mokuai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"
+                    android:padding="10dp">
+
+                </com.meida.cosmeticsshopuser.MyView.CustomGridView>
+
+                <include layout="@layout/xian_3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/Font16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="附近店铺" />
+
+                    <TextView
+                        android:id="@+id/look_dianpu"
+                        style="@style/Font14_hui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/you"
+                        android:text="更多店铺" />
+                </LinearLayout>
+
+                <com.meida.cosmeticsshopuser.MyView.MyListView
+                    android:id="@+id/listview_dianpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null">
+
+                </com.meida.cosmeticsshopuser.MyView.MyListView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

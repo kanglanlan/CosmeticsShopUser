@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<TextView
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:drawableRight="@drawable/you"
+    style="@style/Font14"
+    android:id="@+id/tv_help"
+    android:text=""
+    android:hint="帮助文档"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:layout_height="47dp" />
+    <include layout="@layout/xiantwo"/>
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.meida.cosmeticsshopuser.MyView.CircleImageView
+                android:id="@+id/img_photo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ico_img115" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#606C98"
+                            android:textSize="15dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_time"
+                                style="@style/Font12_hui2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:singleLine="true"
+                                android:text="" />
+
+                            <TextView
+                                android:id="@+id/tv_liulan"
+                                style="@style/Font12_hui2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:drawableLeft="@drawable/ico_img113"
+                                android:drawablePadding="5dp"
+                                android:text="" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Font14_white"
+                        android:layout_width="70dp"
+                        android:id="@+id/tv_guanzhu"
+                        android:layout_height="27dp"
+                        android:background="@drawable/login_bt3"
+                        android:gravity="center"
+                        android:text="+关注" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    style="@style/Font13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="1dp"
+                    android:text="" />
+
+                <com.meida.cosmeticsshopuser.MyView.CustomGridView
+                    android:id="@+id/gv_faxainpic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:horizontalSpacing="3dp"
+                    android:listSelector="@color/white"
+                    android:numColumns="3"
+                    android:verticalSpacing="3dp">
+
+                </com.meida.cosmeticsshopuser.MyView.CustomGridView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/Font15_hui2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ico_wnm_240"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:id="@+id/tv_zxan"
+            android:paddingBottom="10dp"
+            android:text="" />
+
+        <include layout="@layout/xian_3" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_pingjia"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="全部(0)"
+                android:textColor="@drawable/selector_main_rb_pingjia"
+                android:textSize="13dp" />
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_pingjia"
+                android:button="@null"
+                android:gravity="center"
+                android:text="好评(0)"
+                android:textColor="@drawable/selector_main_rb_pingjia"
+                android:textSize="13dp" />
+
+            <RadioButton
+                android:id="@+id/rb_3"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_pingjia"
+                android:button="@null"
+                android:gravity="center"
+                android:text="中评(0)"
+                android:textColor="@drawable/selector_main_rb_pingjia"
+                android:textSize="13dp" />
+
+            <RadioButton
+                android:id="@+id/rb_4"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_pingjia"
+                android:button="@null"
+                android:gravity="center"
+                android:text="差评(0)"
+                android:textColor="@drawable/selector_main_rb_pingjia"
+                android:textSize="13dp" />
+        </RadioGroup>
+    </LinearLayout>
+

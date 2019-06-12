@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/price_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="价格降序"
+            android:textColor="@color/radio_text_selector_main_33"
+            android:button="@null"
+            android:textSize="14sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:drawableRight="@drawable/selector_type_img"
+            android:checked="false"
+            />
+
+        <RadioButton
+            android:id="@+id/price_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="价格升序"
+            android:textColor="@color/radio_text_selector_main_33"
+            android:button="@null"
+            android:textSize="14sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp"
+            android:drawableRight="@drawable/selector_type_img"
+            />
+
+    </RadioGroup>
+
+</LinearLayout>

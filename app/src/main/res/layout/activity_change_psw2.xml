@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_psw"
+                style="@style/Font14_hui2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="请输入新密码(长度6位以上)"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:editable="false"
+                />
+
+            <ToggleButton
+                android:id="@+id/img_reg_eye"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bt_mima"
+                android:padding="10dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/xian"
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_psw2"
+                style="@style/Font14_hui2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="请再次输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="20" />
+
+            <ToggleButton
+                android:id="@+id/img_reg_eye2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bt_mima"
+                android:padding="10dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/bt_psdmima"
+        style="@style/Font15_white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_bt"
+        android:text="保存" />
+</LinearLayout>

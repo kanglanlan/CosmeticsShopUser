@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.meida.cosmeticsshopuser.Activity.UserPhoneActivity">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/userphone"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="25dp"/>
+    
+    <TextView
+        android:id="@+id/currPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="当前手机号：123456789"
+        android:textColor="#666666"
+        android:textSize="13sp"
+        />
+    
+    <Button
+        android:id="@+id/change"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="更换手机号"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:background="@drawable/login_bt"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="26dp"/>
+
+
+</LinearLayout>

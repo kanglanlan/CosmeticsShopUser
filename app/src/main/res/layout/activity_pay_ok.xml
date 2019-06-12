@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <TextView
+        style="@style/Font15_hui2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="15dp"
+        android:drawableTop="@drawable/ico_img92"
+        android:gravity="center"
+        android:text="成功支付" />
+
+    <TextView
+        style="@style/Font13"
+        android:id="@+id/tv_tishi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="温馨提示：你已开启防护功能，请及时确认收货，如有问题，我们后台人员会和您联系，确保您的安全。" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:id="@+id/tv_order"
+        android:background="@drawable/login_bt"
+        android:text="查看订单"
+        style="@style/Font14_white"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:id="@+id/tv_home"
+        android:background="@drawable/huikuang3"
+        android:text="返回首页"
+        android:layout_marginLeft="25dp"
+        style="@style/Font14_hui2"
+        android:gravity="center"/>
+</LinearLayout>
+</LinearLayout>

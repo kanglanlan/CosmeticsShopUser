@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/toolbar_padding_top">
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/Font15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ico_img11"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="深圳市" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/ico_img30" />
+
+            <TextView
+                android:id="@+id/tv_messagenum"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/red"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/xian" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg">
+
+        <TextView
+            android:id="@+id/tv_search"
+            style="@style/Font14_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/white_r_5"
+            android:drawableLeft="@drawable/ico_img09"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="搜一搜"
+            android:paddingLeft="10dp" />
+
+    </FrameLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@color/bg"
+                    app:banner_pointAutoPlayInterval="5000"
+                    app:banner_pointContainerBackground="@color/transparent"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/Font15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="新闻资讯" />
+
+                    <TextView
+                        android:id="@+id/look_zixun"
+                        style="@style/Font13_hui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="10dp"
+                        android:drawableRight="@drawable/you"
+                        android:text="更多资讯" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/newsParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+
+                </LinearLayout>
+
+                <include layout="@layout/xian_3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/Font15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="推荐产品" />
+
+                    <TextView
+                        android:id="@+id/look_chanpin"
+                        style="@style/Font13_hui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/you"
+                        android:text="查看全部" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/gv_chanpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                   >
+
+                </android.support.v7.widget.RecyclerView>
+
+                <include layout="@layout/xian_3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/Font15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="附近店铺" />
+
+                    <TextView
+                        android:id="@+id/look_dianpu"
+                        style="@style/Font13_hui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/you"
+                        android:text="更多店铺" />
+                </LinearLayout>
+
+                <com.meida.cosmeticsshopuser.MyView.MyListView
+                    android:id="@+id/listview_dianpu"
+                    android:divider="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.meida.cosmeticsshopuser.MyView.MyListView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

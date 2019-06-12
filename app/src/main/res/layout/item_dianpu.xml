@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/img_dianpu"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/moren"
+            android:layout_marginBottom="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Font14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratbar01_mc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="false"
+                    app:srb_drawableEmpty="@drawable/ico_img07"
+                    app:srb_drawableFilled="@drawable/ico_img38"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_rating="0"
+                    app:srb_scrollable="false"
+                    app:srb_starHeight="14dp"
+                    app:srb_starPadding="1dp"
+                    app:srb_starWidth="14dp"
+                    app:srb_stepSize="5"
+                    >
+
+                </com.willy.ratingbar.ScaleRatingBar>
+
+                <TextView
+                    android:id="@+id/starTv"
+                    style="@style/Font13_hui2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.meida.cosmeticsshopuser.MyView.FlowLiner
+                android:id="@+id/ll_bq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </com.meida.cosmeticsshopuser.MyView.FlowLiner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_xiaoliang"
+                    style="@style/Font13_hui2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/Font12_hui2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <!--TODO 切图-->
+                <TextView
+                    android:id="@+id/tv_juli"
+                    style="@style/Font12_hui2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ico_img33"
+                    android:drawablePadding="5dp"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/xian" />
+</LinearLayout>

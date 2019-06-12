@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="5dp"
+    >
+
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.问题描述"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/radioParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_qp_option"/>
+        <include layout="@layout/item_qp_option"/>
+        <include layout="@layout/item_qp_option"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioParent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_qp_option2"/>
+        <include layout="@layout/item_qp_option2"/>
+        <include layout="@layout/item_qp_option2"/>
+
+    </RadioGroup>
+
+
+
+
+</LinearLayout>

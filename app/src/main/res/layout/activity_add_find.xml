@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/toolbar_padding_top">
+
+            <TextView
+                android:id="@+id/cancel"
+                style="@style/Font15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:text="取消" />
+
+            <TextView
+                android:id="@+id/publish"
+                style="@style/Font15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="发表" />
+
+            <TextView
+                android:id="@+id/save"
+                style="@style/Font15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:layout_marginRight="55dp"
+                android:text="存草稿" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/xian" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/Font14_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="这一刻的想法"
+            android:padding="10dp"
+            android:nestedScrollingEnabled="false"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <include layout="@layout/xian" />
+
+        <LinearLayout
+            android:id="@+id/typeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                style="@style/Font14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="90dp"
+                android:text="选择分类" />
+
+            <TextView
+                android:id="@+id/type"
+                style="@style/Font14_hui2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/you"
+                android:text=""
+                android:gravity="right"
+                />
+        </LinearLayout>
+
+        <include layout="@layout/xiantwo" />
+
+        <CheckBox
+            android:id="@+id/addrCheckBox"
+            style="@style/Font14"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/cb_xiaoxi"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="所在位置" />
+
+        <include layout="@layout/xiantwo" />
+
+        <LinearLayout
+            android:id="@+id/addrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/Font14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="90dp"
+                android:text="当前位置" />
+
+            <TextView
+                android:id="@+id/addr"
+                style="@style/Font14_hui2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/you"
+                android:text=""
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

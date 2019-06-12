@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.meida.cosmeticsshopuser.Gallery.ImagePagerActivity">
+
+    <com.meida.cosmeticsshopuser.Gallery.HackyViewPager
+        android:id="@+id/hv_imagepager_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:overScrollMode="never"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:id="@+id/tv_imagepager_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_imagepager_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:padding="10dp"
+            android:src="@mipmap/logo"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_imagepager_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

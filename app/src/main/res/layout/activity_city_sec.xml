@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context="com.meida.cosmeticsshopuser.Activity.CitySecActivity">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <LinearLayout
+        android:id="@+id/locationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="14dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前定位："
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/currCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位中"
+            android:textSize="13sp"
+            android:textColor="@color/b3"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ExpandableListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            >
+
+        </ExpandableListView>
+
+
+        <com.meida.cosmeticsshopuser.MyView.LetterBarView
+            android:id="@+id/letterBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            app:lbOverlayTextSize="40sp"
+            app:lbOverlayTextColor="#FFF"
+            app:lbOverlayBackground="@drawable/city_bg_overlay"
+            app:lbLetterBarTextColor="@color/selector_letterbar_text"
+            app:lbLetterBarBackground="@drawable/bg_letterbar" />
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

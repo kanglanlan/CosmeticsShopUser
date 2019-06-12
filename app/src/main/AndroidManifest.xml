@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.meida.cosmeticsshopuser">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 极光权限 -->
+    <!-- Required -->
+    <permission
+        android:name="com.meida.cosmeticsshopuser.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.meida.cosmeticsshopuser.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="UnusedAttribute">
+
+        <!-- jpush -->
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.meida.cosmeticsshopuser" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.meida.cosmeticsshopuser.DataProvider"
+            android:exported="false"
+            android:process=":pushcore" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.meida.cosmeticsshopuser" />
+            </intent-filter>
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.meida.cosmeticsshopuser.DownloadProvider"
+            android:exported="true" />
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.meida.cosmeticsshopuser" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.meida.cosmeticsshopuser" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name=".receiver.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.meida.cosmeticsshopuser" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="049f0d677efac95c90da6050" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+
+        <!-- end of jpush -->
+
+        <receiver
+            android:name=".rongim.SealNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 聚合会话列表 -->
+        <activity
+            android:name=".rongim.SubConversationListActivtiy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.meida.cosmeticsshopuser"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 会话页面 -->
+        <activity
+            android:name=".rongim.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.meida.cosmeticsshopuser"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".rongim.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.meida.cosmeticsshopuser"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- end of rong -->
+
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8b63390fec913b69a78cfa764a6efefd" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- UMENG -->
+
+
+        <!-- 新浪 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信 -->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <!-- qq -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- end of UM -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.meida.cosmeticsshopuser.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".Activity.QiDongActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RegisteredActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Registered2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ForgotpasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Forgotpassword2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StoreGoodsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangenameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePhone2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePhone3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangepswActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePsw2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CollectionshopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CouponsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MyAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MyCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FindInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activity.AddFindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PayOkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WritCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CommentInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MyShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GoodsPingJiaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BrowsinghistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CollectionGoodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StoreInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StoresActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FenleiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.TuiJianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ModifyNickNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UserPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ModifyPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ModifyPhone2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShopCartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CitySecActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.QuestionPaperActivity"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".Activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SubmitOrderActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.PayModeSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FindPJDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MapChoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MessageDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShopListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SingleImgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShopCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PickCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GoodsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Gallery.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChoiceAddrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ReturnGoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.ApplyReturnActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activity.GoodsReturnDetailActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>

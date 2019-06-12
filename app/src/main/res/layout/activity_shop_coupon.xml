@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.meida.cosmeticsshopuser.Activity.ShopCouponActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/shopBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/toolbar_padding_top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/baseBack"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ico_img21" />
+
+                <TextView
+                    style="@style/Font17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="店铺优惠券"
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_dianpu"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/moren" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/Font17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/tv_scnums"
+                        style="@style/Font13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_sc"
+                    style="@style/Font14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ico_img120"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="收藏"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bt_bai"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:id="@+id/gm1"
+                        style="@style/Font11_white"
+                        android:layout_width="18dp"
+                        android:layout_height="21dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ico_img43"
+                        android:gravity="center"
+                        android:text="营"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/gt1"
+                        style="@style/Font13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="营业执照认证"
+                        android:visibility="gone"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"/>
+
+                    <TextView
+                        android:id="@+id/gm2"
+                        style="@style/Font11_white"
+                        android:layout_width="18dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ico_img43"
+                        android:gravity="center"
+                        android:text="保"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/gt2"
+                        style="@style/Font13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="保证金"
+                        android:visibility="gone"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"/>
+
+                    <TextView
+                        android:id="@+id/gm3"
+                        style="@style/Font11_white"
+                        android:layout_width="18dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ico_img43"
+                        android:gravity="center"
+                        android:text="√"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/gt3"
+                        style="@style/Font13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="售假赔偿协议"
+                        android:visibility="gone"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <include
+        layout="@layout/layout_empty"
+        />
+
+</LinearLayout>

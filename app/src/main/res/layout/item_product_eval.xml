@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="13dp">
+
+        <com.meida.cosmeticsshopuser.MyView.CircleImageView
+            android:id="@+id/img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/moren"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="#576d9d"/>
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srb_clearRatingEnabled="true"
+                app:srb_clickable="false"
+                app:srb_drawableEmpty="@drawable/ico_img07"
+                app:srb_drawableFilled="@drawable/ico_img38"
+                app:srb_isIndicator="false"
+                app:srb_minimumStars="0"
+                app:srb_numStars="5"
+                app:srb_rating="0"
+                app:srb_scrollable="false"
+                app:srb_starHeight="17dp"
+                app:srb_starPadding="1dp"
+                app:srb_starWidth="17dp"
+                app:srb_stepSize="5">
+
+            </com.willy.ratingbar.ScaleRatingBar>
+
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:maxLength="10"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/evalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/longStr"
+        android:textColor="#333333"
+        android:textSize="13sp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingMultiplier="1.2"
+        />
+
+    <com.meida.cosmeticsshopuser.MyView.FlowLiner
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp">
+
+
+    </com.meida.cosmeticsshopuser.MyView.FlowLiner>
+
+    <TextView
+        android:id="@+id/specify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="13sp"
+        android:textColor="#999999"
+        android:layout_marginLeft="62dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="6dp"
+        />
+
+    <TextView
+        android:id="@+id/reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        android:text=""
+        android:layout_marginLeft="62dp"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+
+</LinearLayout>

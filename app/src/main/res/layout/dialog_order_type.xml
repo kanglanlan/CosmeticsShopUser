@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RadioButton
+            android:id="@+id/r0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:gravity="center"
+            android:textColor="@color/radio_text_selector_main_33"
+            android:button="@null"
+            android:textSize="15sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:drawableRight="@drawable/selector_type_img"
+            android:checked="true"
+            />
+
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="同城配送"
+            android:gravity="center"
+            android:textColor="@color/radio_text_selector_main_33"
+            android:button="@null"
+            android:textSize="15sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:drawableRight="@drawable/selector_type_img"
+            />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="快递配送"
+            android:gravity="center"
+            android:textColor="@color/radio_text_selector_main_33"
+            android:button="@null"
+            android:textSize="15sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawableRight="@drawable/selector_type_img"
+            android:visibility="visible"
+            />
+
+        <RadioButton
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="商家自送"
+            android:gravity="center"
+            android:textColor="@color/radio_text_selector_main_33"
+            android:button="@null"
+            android:textSize="15sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawableRight="@drawable/selector_type_img"
+            />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/dismissView"
+        android:layout_width="match_parent"
+        android:layout_height="2000dp"
+        android:background="#50000000"
+        />
+
+</LinearLayout>

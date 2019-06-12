@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+    <include layout="@layout/xian" />
+    <include layout="@layout/xian_3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/Font14_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:hint="收件人姓名"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+
+        <include layout="@layout/xiantwo" />
+
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/Font14_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:hint="手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+
+        <include layout="@layout/xian" />
+
+        <include layout="@layout/xian_3" />
+
+        <include layout="@layout/xian" />
+
+        <TextView
+            android:id="@+id/tv_shengshiqu"
+            style="@style/Font14_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@drawable/you"
+            android:gravity="center_vertical"
+            android:hint="省、市、区"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <include layout="@layout/xiantwo" />
+
+        <EditText
+            android:id="@+id/et_jiedaodizhi"
+            style="@style/Font13_hui2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="详细地址"
+            android:padding="10dp" />
+
+        <include layout="@layout/xian" />
+
+        <include layout="@layout/xian_3" />
+
+        <include layout="@layout/xian" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Font13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设为默认地址" />
+
+                <TextView
+                    style="@style/Font13_hui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="注：每次下单时自动使用该地址" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_morendizhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@drawable/cb_xiaoxi" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        style="@style/Font15_white"
+        android:layout_margin="15dp"
+        android:background="@drawable/login_bt23"
+        android:gravity="center"
+        android:text="保存地址" />
+</LinearLayout>

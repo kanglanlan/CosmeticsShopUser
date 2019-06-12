@@ -1,0 +1,169 @@
+
+
+ versionCode 2
+        versionName "1.0.4"
+
+
+
+        0404
+         versionCode 3
+                versionName "1.0.5"
+
+        0408
+        修改了商品规格选择框，可以输入商品数量
+         versionCode 4
+                        versionName "1.0.6"
+
+
+0416
+页面优化（商家首页 优惠券 部分）
+versionCode 5
+        versionName "1.0.7"
+
+
+
+0423
+优化用户体验（店铺页可以下拉刷新了）
+versionCode 6
+        versionName "1.0.8"
+
+
+0430
+优化用户体验（登录存用户头像加http头）
+versionCode 7
+        versionName "1.0.9"
+
+
+0511
+优化用户体验（版本更新采用versionname）
+versionCode 11
+        versionName "1.1.0"
+
+
+
+
+
+
+
+应用签名
+f2f38408f828a19d883dcdddffb5dc02
+
+包名
+com.meida.cosmeticsshopuser
+
+您的密钥库包含 1 个条目
+
+别名: huazhuangpin
+创建日期: 2018-11-7
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=meida, OU=meida, O=meida, L=meida, ST=meida, C=meida
+发布者: CN=meida, OU=meida, O=meida, L=meida, ST=meida, C=meida
+序列号: 3b73aa86
+有效期为 Wed Nov 07 16:14:19 CST 2018 至 Sun Nov 01 16:14:19 CST 2043
+证书指纹:
+         MD5:  F2:F3:84:08:F8:28:A1:9D:88:3D:CD:DD:FF:B5:DC:02
+         SHA1: 6E:A0:6D:55:C6:2D:63:25:3F:B3:35:BA:DE:C2:EC:A4:CE:E7:1C:82
+         SHA256: B5:6B:52:9C:FA:11:C7:7F:FA:E0:0B:9F:79:2F:67:28:91:1C:C2:63:13:
+12:E5:6C:59:CE:03:17:DC:D4:C0:02
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+
+
+F2:F3:84:08:F8:28:A1:9D:88:3D:CD:DD:FF:B5:DC:02
+
+f2f38408f828a19d883dcdddffb5dc02
+
+
+三方信息
+
+高德
+8b63390fec913b69a78cfa764a6efefd
+
+
+12.26
+------------------------------
+shop
+销量 与 虚拟销量
+
+
+消息中心   系统消息 改为 订单消息
+
+
+
+
+
+
+
+
+
+
+
+*****************************************************************************************************************************************
+商家端
+com.meida.cosmeticsmerchants
+---------------------------------------------------------------------
+您的密钥库包含 1 个条目
+
+别名: key0
+创建日期: 2018-11-17
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=KLL, OU=MD, O=MD, L=ZZ, ST=HN, C=CN
+发布者: CN=KLL, OU=MD, O=MD, L=ZZ, ST=HN, C=CN
+序列号: 4218656c
+有效期为 Sat Nov 17 09:31:56 CST 2018 至 Mon Oct 24 09:31:56 CST 2118
+证书指纹:
+         MD5:  98:F8:41:88:84:01:E8:91:00:A0:50:AC:7F:E7:D5:82
+         SHA1: 4A:A5:E0:52:5A:4A:E9:EB:73:BC:6B:74:62:87:9D:C4:94:1E:0A:52
+         SHA256: 4E:00:4A:0F:05:BF:B8:FA:5C:4A:4A:42:08:50:20:05:F5:75:B9:D5:73:
+12:5A:13:11:21:5C:E5:11:D2:97:03
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 3
+
+扩展:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: FC 3A 86 F5 14 81 44 75   5B 44 B3 2F A2 3F F9 1B  .:....Du[D./.?..
+0010: FA 89 E4 DC                                        ....
+
+
+
+购物车 数量 变动
+
+订单 列表 变动 event
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

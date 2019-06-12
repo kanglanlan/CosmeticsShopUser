@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部(0)"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="13dp" />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:gravity="center"
+            android:text="好评(0)"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="13dp" />
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:gravity="center"
+            android:text="中评(0)"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="13dp" />
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:gravity="center"
+            android:text="差评(0)"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="13dp" />
+    </RadioGroup>
+
+    <include layout="@layout/layout_list" />
+</LinearLayout>

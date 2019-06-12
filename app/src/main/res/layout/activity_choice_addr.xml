@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.meida.cosmeticsshopuser.Activity.ChoiceAddrActivity">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@drawable/bt_search"
+            android:hint="输入关键词进行搜索"
+            android:textColorHint="#999999"
+            android:textSize="13sp"
+            android:drawableLeft="@drawable/ico_img09"
+            android:drawablePadding="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="#666666"
+            android:paddingRight="12dp"
+            android:visibility="visible"
+            android:paddingLeft="12dp"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

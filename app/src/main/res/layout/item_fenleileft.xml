@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_fenlei"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/view_fenlei"
+        android:layout_width="5dp"
+        android:layout_height="22dp"
+        android:background="@color/main" />
+
+    <TextView
+        android:id="@+id/tv_fenleiname"
+        style="@style/Font15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="3dp"
+        android:minHeight="50dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="" />
+
+</LinearLayout>

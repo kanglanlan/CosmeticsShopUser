@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="@dimen/toolbar_padding_top"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bt_searchhui"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="18dp"
+                android:src="@drawable/ico_img09" />
+
+            <com.meida.cosmeticsshopuser.MyView.ClearEditText
+                android:id="@+id/et_search"
+                style="@style/Font14_hui2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="18dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:singleLine="true"
+                android:hint="护肤" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_quxiao"
+            style="@style/Font15"
+            android:layout_width="60dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+    <include layout="@layout/xian" />
+
+    <TextView
+        style="@style/Font14"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="热门搜索" />
+
+    <com.meida.cosmeticsshopuser.MyView.FlowLiner
+        android:id="@+id/fl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Font14"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="搜索历史" />
+
+        <TextView
+            android:id="@+id/tv_qingkong"
+            style="@style/Font14"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/ico_img71"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="清空"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

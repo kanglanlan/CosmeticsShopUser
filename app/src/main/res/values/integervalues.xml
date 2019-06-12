@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用户名长度-->
+    <integer name="nameslength">20</integer>
+    <integer name="companyNoLength">15</integer>
+    <!--密码长度-->
+    <integer name="pslength">20</integer>
+    <!--联系方式-->
+    <integer name="phonelength">11</integer>
+    <!--详细地址-->
+    <integer name="AdsDetaillength">80</integer>
+    <!--验证码长度-->
+    <integer name="checknumlength">8</integer>
+    <!--评价长度-->
+    <integer name="pjlength">100</integer>
+    <!--验证码长度-->
+    <integer name="yzmlength">6</integer>
+    <!--特殊要求-->
+    <integer name="other_ts">50</integer>
+    <!--收发货单位-->
+    <integer name="send_getperson">30</integer>
+    <!--身份证长度-->
+    <integer name="idcardnumslength">18</integer>
+    <!--订单留言长度-->
+    <integer name="orderNote">40</integer>
+    <!--银行卡号 长度-->
+    <integer name="BankCardLength">20</integer>
+    <!--输入金额 长度   7位  百万  -->
+    <integer name="MoneyLength">10</integer>
+
+    <!--反馈长度-->
+    <integer name="feedbacklength">500</integer>
+    <integer name="anim_duration_medium">300</integer>
+    <integer name="anim_duration_long">400</integer>
+    <integer name="config_pop_duration">250</integer>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--侧滑动作响应相关-->
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="LetterBar">
+
+        <!-- A drawable to use as the background of the LetterBar -->
+        <attr name="lbLetterBarBackground" format="reference|color" />
+
+        <!-- Text Color of the LetterBar text -->
+        <attr name="lbLetterBarTextColor" format="reference|color" />
+
+        <!-- A drawable to use as the background of the Overlay -->
+        <attr name="lbOverlayBackground" format="reference|color" />
+
+        <!-- Text Color of the Overlay text -->
+        <attr name="lbOverlayTextColor" format="reference|color" />
+
+        <!-- Text Size of the Overlay text -->
+        <attr name="lbOverlayTextSize" format="reference|dimension" />
+
+    </declare-styleable>
+
+
+    <!--数字进度条-->
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer"/>
+        <attr name="progress_max" format="integer"/>
+
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_reached_color" format="color"/>
+
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+
+        <attr name="progress_text_offset" format="dimension"/>
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="TextDrawable">
+        <attr name="drawableLeftWidth" format="dimension"/>
+        <attr name="drawableTopWidth" format="dimension"/>
+        <attr name="drawableRightWidth" format="dimension"/>
+        <attr name="drawableLeftHeight" format="dimension"/>
+        <attr name="drawableTopHeight" format="dimension"/>
+        <attr name="drawableRightHeight" format="dimension"/>
+        <attr name="drawableBottomHeight" format="dimension"/>
+        <attr name="drawableBottomWidth" format="dimension"/>
+        <attr name="isAliganCenter" format="boolean"/>
+    </declare-styleable>
+
+
+
+</resources>

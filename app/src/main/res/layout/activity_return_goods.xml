@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.meida.cosmeticsshopuser.Activity.ReturnGoodsActivity">
+
+    <include
+        layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/main"
+        app:tabIndicatorHeight="2dp"
+        app:tabMinWidth="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/main"
+        app:tabTextAppearance="@style/Font15"
+        app:tabTextColor="@color/black"
+        app:tabBackground="@color/white"/>
+
+    <include layout="@layout/xian"></include>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@color/bg">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+            <include
+                android:id="@+id/emptyView1"
+                layout="@layout/layout_empty" />
+
+        </FrameLayout>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/bg">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+            <include
+                android:id="@+id/emptyView2"
+                layout="@layout/layout_empty" />
+
+        </FrameLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+</LinearLayout>

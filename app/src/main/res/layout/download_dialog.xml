@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_dialog2"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="正在拼命下载中..."
+        android:textColor="@color/b3"
+        android:textSize="15sp"/>
+
+
+    <!--   <ProgressBar
+           android:id="@+id/progress_bar_download_dialog"
+           style="?android:attr/progressBarStyleHorizontal"
+           android:layout_width="match_parent"
+           android:layout_height="5dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:max="100"
+           android:progress="100"
+           android:progressDrawable="@drawable/progressbar"/>-->
+
+    <com.meida.cosmeticsshopuser.MyView.numsprogress.NumberProgressBar
+        android:id="@+id/progress_bar_download_dialog"
+        style="@style/NumberProgressBar_Default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        custom:progress_current="0"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/line_color"
+        >
+
+    </View>
+
+    <TextView
+        android:id="@+id/lay_down_bg_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp"
+        android:text="后台下载"
+        android:textColor="@color/main"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>

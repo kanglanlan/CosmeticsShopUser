@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_height"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@color/white">
+
+        <RadioButton
+            android:id="@+id/radioAll"
+            android:layout_width="wrap_content"
+            android:minWidth="73dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioNice"
+            android:layout_width="wrap_content"
+            android:minWidth="73dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:gravity="center"
+            android:text="好评"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioMiddle"
+            android:layout_width="wrap_content"
+            android:minWidth="73dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:gravity="center"
+            android:text="中评"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radioBad"
+            android:layout_width="wrap_content"
+            android:minWidth="73dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rb_pingjia"
+            android:button="@null"
+            android:gravity="center"
+            android:text="差评"
+            android:textColor="@drawable/selector_main_rb_pingjia"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/line_color"/>
+
+    <include layout="@layout/layout_base_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+</LinearLayout>

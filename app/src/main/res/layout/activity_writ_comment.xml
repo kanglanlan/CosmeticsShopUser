@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <include layout="@layout/xian" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/img_pj"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/moren" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Font14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品评分" />
+
+
+                    <com.willy.ratingbar.ScaleRatingBar
+                        android:id="@+id/ratbar01_mc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="false"
+                        app:srb_drawableEmpty="@drawable/ico_img07"
+                        app:srb_drawableFilled="@drawable/ico_img38"
+                        app:srb_isIndicator="false"
+                        app:srb_minimumStars="0"
+                        app:srb_numStars="5"
+                        app:srb_rating="0"
+                        app:srb_scrollable="false"
+                        app:srb_starHeight="17dp"
+                        app:srb_starPadding="1dp"
+                        app:srb_starWidth="17dp"
+                        app:srb_stepSize="5">
+
+                    </com.willy.ratingbar.ScaleRatingBar>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_content"
+                style="@style/Font14_hui2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/bg"
+                android:gravity="top"
+                android:hint="评价字数大于10个字就有机会送积分~"
+                android:padding="10dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <CheckBox
+                    android:id="@+id/cb_pj"
+                    style="@style/Font13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/cb_gx"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:text="匿名评价"
+                    />
+
+            </FrameLayout>
+
+            <include layout="@layout/xian_3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Font13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="描述相符" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratbar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ico_img07"
+                    app:srb_drawableFilled="@drawable/ico_img38"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_rating="0"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="17dp"
+                    app:srb_starPadding="1dp"
+                    app:srb_starWidth="17dp"
+                    app:srb_stepSize="5">
+
+                </com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Font13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品评价" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratbar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ico_img07"
+                    app:srb_drawableFilled="@drawable/ico_img38"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_rating="0"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="17dp"
+                    app:srb_starPadding="1dp"
+                    app:srb_starWidth="17dp"
+                    app:srb_stepSize="5">
+
+                </com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Font13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务态度" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratbar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ico_img07"
+                    app:srb_drawableFilled="@drawable/ico_img38"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_rating="0"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="17dp"
+                    app:srb_starPadding="1dp"
+                    app:srb_starWidth="17dp"
+                    app:srb_stepSize="5">
+
+                </com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/Font13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物流速度" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/ratbar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ico_img07"
+                    app:srb_drawableFilled="@drawable/ico_img38"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_rating="0"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="17dp"
+                    app:srb_starPadding="1dp"
+                    app:srb_starWidth="17dp"
+                    app:srb_stepSize="5">
+
+                </com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_pj"
+                style="@style/Font15_white"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/login_bt"
+                android:text="提交评价" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

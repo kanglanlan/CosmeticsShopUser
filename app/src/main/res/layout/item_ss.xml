@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:paddingRight="13dp"
+    android:paddingLeft="13dp"
+    android:text=""
+    android:minWidth="55dp"
+    style="@style/Font12_hui2"
+    android:id="@+id/tv_ss"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/huibt10"/>
+
